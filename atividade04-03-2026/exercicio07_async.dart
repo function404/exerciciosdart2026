@@ -1,14 +1,18 @@
-void main() {
-  // Exercício 7: Manipulação de Listas
-  List<int> numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+import 'dart:async';
 
-  numeros.add(11);
-  numeros.remove(5);
+void main() async {
+  final controller = StreamController<String>();
 
-  print('Tamanho da lista: ${numeros.length}');
-  print('Primeiro elemento: ${numeros.first}');
-  print('Último elemento: ${numeros.last}');
+  controller.stream.listen((mensagem) {
+    print('Nova mensagem: $mensagem');
+  });
 
-  print('Elementos:');
-  numeros.forEach((numero) => print('- $numero'));
+  print('Iniciando chat da equipe...');
+  for (int i =1; i <= 5; i++) {
+    await Future.delayed(Duration(seconds: 1));
+    controller.sink.add('Olá, esta é a mensagem $i');
+  }
+
+  controller.close();
+  print('Chat finalizado.');
 }

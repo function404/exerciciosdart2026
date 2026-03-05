@@ -1,36 +1,27 @@
+import 'dart:async';
+
 void main() {
-  // Exercício 9: Map de Produtos
-  Map<int, String> produtos = {
-    1: 'Camisa do Internacional Oficial',
-    2: 'Kunai de Borracha',
-    3: 'Bandana da Folha',
-    4: 'Action Figure Satoru Gojo',
-    5: 'Chuteira',
-  };
+  final controller = StreamController<int>.broadcast();
 
-  // (1) Buscar um produto por ID
-  void buscarProduto(int id) {
-    if (produtos.containsKey(id)) {
-      print('Produto encontrado: ${produtos[id]}');
-    } else {
-      print('Produto com ID $id não encontrado.');
-    }
+  int contador = 0;
+  int soma = 0;
+
+  controller.stream.listen((n) => print('Listener 1 (print simples): $n'));
+
+  controller.stream.listen((n) {
+    contador++;
+    print('Listener 2 (contador): Total de itens recebidos = $contador');
+  });
+
+  controller.stream.listen((n) {
+    soma += n;
+    print('Listener 3 (soma): Valor total acumulado = $soma');
+  });
+
+  print('Emitindo números...');
+  for (int i = 1; i <= 10; i++) {
+    controller.sink.add(i);
   }
 
-  // (2) Listar todos os produtos
-  void listarProdutos() {
-    print('\nLista de Produtos:');
-    produtos.forEach((id, nome) => print('ID: $id | Nome: $nome'));
-  }
-
-  // (3) Remover um produto por ID
-  void removerProduto(int id) {
-    produtos.remove(id);
-    print('\nProduto com ID $id removido.');
-  }
-
-  buscarProduto(3);
-  listarProdutos();
-  removerProduto(5);
-  listarProdutos();
+  controller.close();
 }

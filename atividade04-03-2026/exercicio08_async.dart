@@ -1,24 +1,16 @@
+Future<int> numerosStream() async {
+  for (int i = 1; i <= 20; i++) {
+    yield i;
+  }
+}
+
 void main() {
-  // Exercício 8: Lista de Objetos e Filtros
-  List<String> frutas = [
-    'abacaxi',
-    'ameixa',
-    'banana',
-    'laranja',
-    'manga',
-    'maçã',
-    'morango',
-    'melancia',
-    'melão',
-    'pera',
-    'uva',
-  ];
-
-  var frutasComM = frutas
-    .where((f) => f.toLowerCase().startsWith('m'))
-    .toList();
-  print('Frutas com M: $frutasComM');
-
-  var frutasMaiusculas = frutasComM.map((f) => f.toUpperCase()).toList();
-  print('Frutas em Maiúsculas: $frutasMaiusculas');
+  print('transformando Stream...');
+  numerosStream()
+    .where((n) => n % 2 == 0)
+    .map((n) => n * 2)
+    .take(5)
+    .listen((r) {
+    print('Resultado: $r');
+  });
 }

@@ -1,10 +1,29 @@
-void main() {
-  // Exercício 10: Set e Operações de Conjunto
-  Set<int> a = {1, 2, 3, 4, 5};
-  Set<int> b = {4, 5, 6, 7, 8};
+import 'dart:async';
 
-  print('União: ${a.union(b)}');
-  print('Interseção: ${a.intersection(b)}');
-  print('Diferença (A - B): ${a.difference(b)}');
-  print('O número 3 está em A? ${a.contains(3)}');
+void main() {
+  final controller = StreamController<String>();
+  Timer? debounceTimer;
+
+  // Emulador de cliques rápidos do usuário (a cada 500ms)
+  Timer.periodic(Duration(milliseconds: 500), (timer) {
+    if (timer.tick > 5) {
+      timer.cancel();
+      controller.close();
+      return;
+    }
+    print('>> Usuário digitou algo ${timer.tick}');
+    controller.sink.add('Evento ${timer.tick}');
+  });
+
+  // Listener com lógica de Debounce customizada (aguarda 1 segundo)
+  controller.stream.listen((e) {
+    if (debounceTimer?.isActive ?? false) {
+      // Cancela o timer anterior se houver novo evento
+      debounceTimer!.cancel();
+    }
+
+    debounceTimer = Timer(Duration(milliseconds: 300), () {
+      print('>> Evento processado após 1s de inatividade: $e');
+    });
+  });
 }
