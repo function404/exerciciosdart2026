@@ -1,6 +1,6 @@
 # Desenvolvimento para Dispositivos Móveis - Exercícios Dart 2026
 **Faculdade Senac Joinville | 5ª Fase - Análise e Desenvolvimento de Sistemas (2026/1)**
-**Autor:** Gustavo Adriano Alves Palmeira
+**Autor:** Gustavo Adriano Alves Palmeira e Lincoln Novais Mezzalira
 
 ## 📝 Sobre o Repositório
 Este repositório consolida todas as atividades e listas de exercícios desenvolvidas durante as aulas focadas na linguagem Dart. O objetivo geral é praticar desde a sintaxe e fundamentos de Orientação a Objetos até operações avançadas de assincronismo e consumo de APIs.
