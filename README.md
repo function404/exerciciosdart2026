@@ -1,41 +1,18 @@
-# Desenvolvimento para Dispositivos Móveis - Aula 02
+# Desenvolvimento para Dispositivos Móveis - Exercícios Dart 2026
 **Faculdade Senac Joinville | 5ª Fase - Análise e Desenvolvimento de Sistemas (2026/1)**
+**Autor:** Gustavo Adriano Alves Palmeira
 
-## 📝 Sobre o Projeto
-Este repositório contém a resolução da **Lista de Exercícios — Aula 2**, focada nos conceitos fundamentais da linguagem Dart O objetivo é praticar a sintaxe, tipagem, funções, coleções e os pilares da Orientação a Objetos (POO)
+## 📝 Sobre o Repositório
+Este repositório consolida todas as atividades e listas de exercícios desenvolvidas durante as aulas focadas na linguagem Dart. O objetivo geral é praticar desde a sintaxe e fundamentos de Orientação a Objetos até operações avançadas de assincronismo e consumo de APIs.
 
-A lista é composta por 15 exercícios práticos, estruturados em níveis de dificuldade: Básico, Intermediário e Avançado
+## 📂 Estrutura de Pastas
 
-## 📂 Estrutura de Arquivos
-Conforme solicitado nas instruções gerais, cada exercício foi resolvido em um arquivo `.dart` separado para manter a organização. 
-
-* **Seção 1 — Variáveis e Tipos Primitivos**
-  * `exercicio01.dart`: Declaração e Inferência de Tipos
-  * `exercicio02.dart`: const vs final na Prática
-  * `exercicio03.dart`: Conversão de Tipos
-
-* **Seção 2 — Funções**
-  * `exercicio04.dart`: Função Tradicional e Arrow Function
-  * `exercicio05.dart`: Parâmetros Nomeados e Opcionais
-  * `exercicio06.dart`: Função de Alta Ordem
-
-* **Seção 3 — Coleções (List, Map, Set)**
-  * `exercicio07.dart`: Manipulação de Listas
-  * `exercicio08.dart`: Lista de Objetos e Filtros
-  * `exercicio09.dart`: Map de Produtos
-  * `exercicio10.dart`: Set e Operações de Conjunto
-
-* **Seção 4 — Orientação a Objetos**
-  * `exercicio11.dart`: Classe Básica - Produto
-  * `exercicio12.dart`: Construtores Nomeados
-  * `exercicio13.dart`: Herança - ContaBancaria
-  * `exercicio14.dart`: Interface e Implementação
-  * `exercicio15.dart`: Mixins em Ação
+* **[atividade26-02-2026](./atividade26-02-2026/)**: Focada nos conceitos iniciais de Dart (Variáveis, Funções, Coleções e Pilares da POO). Contém 15 exercícios práticos.
+* **[atividade04-03-2026](./atividade04-03-2026/)**: Direcionada ao estudo de Programação Assíncrona. Contém 12 exercícios explorando `Future`, `async/await` e `Streams`.
+* **[atvdduos11-03-2026](./atvdduos11-03-2026/)**: Aplicação prática de conhecimentos com 4 projetos condensados: Sistema de Biblioteca, Consumo de API de Clima, Chat em Tempo Real e aplicação rigorosa de Null Safety.
 
 ## 🚀 Como Executar
-Os códigos podem ser executados de duas maneiras:
-1. **DartPad:** Copie o conteúdo de qualquer arquivo `.dart` e cole no [DartPad](https://dartpad.dev/). Clique em "Run" para ver a saída no console.
-2. **Ambiente Local:** Se você tiver o ambiente Flutter/Dart instalado localmente, abra o terminal na pasta do repositório e execute o arquivo desejado:
-   ```bash
-   dart run exercicio01.dart
-   ```
+Você pode testar os códigos copiando e colando no [DartPad](https://dartpad.dev/) ou executando localmente via terminal. Exemplo:
+```bash
+dart run atividade26-02-2026/exercicio01.dart
+---
