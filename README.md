@@ -15,4 +15,4 @@ Este repositório consolida todas as atividades e listas de exercícios desenvol
 Você pode testar os códigos copiando e colando no [DartPad](https://dartpad.dev/) ou executando localmente via terminal. Exemplo:
 ```bash
 dart run atividade26-02-2026/exercicio01.dart
----
+```
